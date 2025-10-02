@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: utf-8 -*-
 def sudy_nebo_lichy(cislo):
     if cislo % 2 == 0:
         print(f"Číslo {cislo} je sudé")
