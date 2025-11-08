@@ -10,12 +10,12 @@ png_header = b'\x89PNG\r\n\x1a\n'
 
 def read_header(file_name, header_length):
     try:
-        f = open(file_name, 'rb')      # открываем в двоичном режиме
-        data = f.read(header_length)   # читаем нужное количество байт
+        f = open(file_name, 'rb')      
+        data = f.read(header_length)   
         f.close()
         return data
     except:
-        return b''                     # если ошибка — возвращаем пусто
+        return b''                     
 
 
 
