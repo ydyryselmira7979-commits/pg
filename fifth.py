@@ -54,4 +54,4 @@ if __name__ == '__main__':
         file_name = sys.argv[1]
         print_file_type(file_name)
     except:
-        print("Chyba: zadej jméno souboru
+        print("Chyba: zadej jméno souboru")
