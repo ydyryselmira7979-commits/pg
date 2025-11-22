@@ -5,16 +5,29 @@ def download_url_and_get_all_hrefs(url):
     r = requests.get(url)
     if r.status_code != 200:
         return []
+    
     t = r.text
     out = []
     i = 0
+    
+    search_string = 'href="' 
+    search_len = len(search_string)
+    
     while True:
-        i = t.find('<a href="', i)
+        i = t.find(search_string, i)
         if i == -1:
             break
-        i += 9
+            
+        i += search_len
+        
         j = t.find('"', i)
-        out.append(t[i:j])
+        
+        if j != -1:
+            out.append(t[i:j])
+            i = j + 1
+        else:
+            break
+            
     print(out)
     return out
 
